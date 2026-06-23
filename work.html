@@ -86,6 +86,25 @@
         box-shadow: 0 0 35px rgba(37, 211, 102, 0.8);
       }
 
+      /* Small Social Icons Footer */
+      .social-box-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        border: 1px solid rgba(255,255,255,0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255,255,255,0.6);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .social-box-icon:hover {
+        border-color: #34d399;
+        color: #34d399;
+        background-color: rgba(52, 211, 153, 0.1);
+      }
+
       @media (max-width: 1024px) {
         #projects-grid {
           grid-template-columns: repeat(2, 1fr);
@@ -186,8 +205,8 @@
         <div style="flex: 1 1 150px;">
           <h4 style="font-weight: 600; margin-bottom: 20px; font-size: 1rem; color: #fff;">Connect</h4>
           <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; color: rgba(255,255,255,0.6); font-size: 0.9rem;">
-            <li><a href="contact.html" style="color: inherit; text-decoration: none;">Email Us</a></li>
-            <li><a href="#" style="color: inherit; text-decoration: none;">Instagram</a></li>
+            <li><a href="mailto:knootix@gmail.com" style="color: inherit; text-decoration: none;">Email Us</a></li>
+            <li><a href="https://instagram.com/knootix" target="_blank" style="color: inherit; text-decoration: none;">Instagram</a></li>
             <li><a href="https://wa.me/923414680668" target="_blank" style="color: inherit; text-decoration: none;">WhatsApp</a></li>
           </ul>
         </div>
@@ -195,7 +214,27 @@
       </div>
 
       <div style="text-align: left; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; color: rgba(255,255,255,0.5); font-size: 0.85rem;">
-        <p>© 2026 <span style="color: #34d399;">Knootix</span>. All rights reserved. Crafted with precision in Lahore 🇵🇰</p>
+        <p style="margin: 0;">© 2026 <span style="color: #34d399;">Knootix</span>. All rights reserved. Crafted with precision in Lahore 🇵🇰</p>
+        
+        <div style="display: flex; gap: 12px; margin-right: 90px;"> <a href="https://instagram.com/knootix" target="_blank" class="social-box-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="mailto:knootix@gmail.com" class="social-box-icon" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+            <a href="https://wa.me/923414680668" target="_blank" class="social-box-icon" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </a>
+        </div>
       </div>
     </footer>
 
@@ -242,7 +281,7 @@
           year: "2024",
           projectType: "Web Development",
           status: "Completed",
-          image: "assets/lumina.jpg", // Add a 3rd image path here
+          image: "assets/lumina.jpg",
           overviewText: "<p>Lumina was built to put the focus entirely on the creator's work, providing an immersive, high-performance visual experience.</p>",
           delivered: [
             { title: "Frontend Development", desc: "Built a responsive, highly animated interface." },
