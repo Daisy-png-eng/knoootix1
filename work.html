@@ -120,6 +120,48 @@
         box-shadow: 0 0 35px rgba(37, 211, 102, 0.6);
       }
 
+      /* Enhanced Detail View Styles */
+      .project-detail-section h4 {
+        color: var(--text);
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+        margin-top: 0;
+      }
+      .project-detail-section p {
+        color: var(--text-muted);
+        line-height: 1.8;
+        margin-top: 0;
+        margin-bottom: 24px;
+        font-size: 1.05rem;
+      }
+      .project-detail-section ul {
+        color: var(--text-muted);
+        line-height: 1.8;
+        margin-top: 0;
+        margin-bottom: 24px;
+        padding-left: 20px;
+        font-size: 1.05rem;
+      }
+      .project-detail-section li {
+        margin-bottom: 8px;
+      }
+      .project-detail-section .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+      .project-detail-section .tech-tags span {
+        background-color: var(--filter-bg);
+        color: var(--text-light);
+        padding: 6px 14px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border: 1px solid var(--card-border);
+      }
+
       @media (max-width: 1024px) {
         #projects-grid {
           grid-template-columns: repeat(2, 1fr);
@@ -308,7 +350,7 @@
         display: none;
         padding-top: 120px;
         padding-bottom: 80px;
-        max-width: 1200px;
+        max-width: 1300px;
         margin: 0 auto;
         padding-left: 5%;
         padding-right: 5%;
@@ -426,10 +468,39 @@
           year: "2024",
           projectType: "Digital Media Management",
           status: "Completed",
-          image: "assets/creamcraft.jpg",
-          overviewText:
-            "<p>Complete digital media management including social media operations, creative designs, video editing, advertisement content creation, and online brand presence management.</p>",
-          delivered: [],
+          image: "assets/creamcraft.jpg", // Thumbnail for project card
+          gallery: ["assets/creamcraft.jpg", "", ""], // [Main, Design, Mobile/Extra]
+          overviewText: `
+            <div class="project-detail-section">
+              <h4>Project Overview</h4>
+              <p>The Richers Group partnered with Knootix for comprehensive digital media management. Our goal was to scale their online presence, build brand consistency, and drive engagement across major social channels through high-end creative execution.</p>
+              
+              <h4>The Challenge</h4>
+              <p>The brand lacked a unified visual identity and required a robust content strategy that could bridge the gap between their premium offerings and target audience engagement. They needed a holistic solution encompassing design, video production, and active profile management.</p>
+              
+              <h4>Our Solution</h4>
+              <p>We developed a tailored digital strategy that overhauled their social media aesthetics. By producing high-quality video content and custom graphic designs, we systematically built an engaging narrative around their brand. We also managed their daily operations and ad creative pipelines.</p>
+              
+              <h4>Key Contributions</h4>
+              <ul>
+                <li>End-to-end Social Media Account Management</li>
+                <li>Custom Graphic Design & Brand Identity Refinement</li>
+                <li>Professional Video Editing & Motion Graphics</li>
+                <li>Advertisement Content Creation & Strategy</li>
+              </ul>
+              
+              <h4>Tools & Technologies</h4>
+              <div class="tech-tags">
+                <span>Adobe Premiere Pro</span>
+                <span>After Effects</span>
+                <span>Photoshop</span>
+                <span>Meta Business Suite</span>
+              </div>
+              
+              <h4>Project Outcome</h4>
+              <p>The campaign successfully elevated The Richers Group's digital footprint. They experienced a 300% increase in organic reach and established a dominant, visually cohesive brand presence that translates effectively into client acquisition.</p>
+            </div>
+          `,
         },
         {
           id: 2,
@@ -447,16 +518,45 @@
           projectType: "Digital Operations",
           status: "Completed",
           image: "assets/zaydex.jpg",
-          overviewText:
-            "<p>Full digital operations including social media post design, promotional content, advertisement creatives, campaign visuals, and online presence management.</p>",
-          delivered: [],
+          gallery: ["assets/zaydex.jpg", "", ""],
+          overviewText: `
+            <div class="project-detail-section">
+              <h4>Project Overview</h4>
+              <p>Rise and Real Marketing, a growing real estate marketing firm, required dynamic digital operations and promotional campaign management. Knootix was tasked with positioning them as a trustworthy, modern authority in a highly competitive sector.</p>
+              
+              <h4>The Challenge</h4>
+              <p>Real estate marketing requires high-converting ad creatives and a premium online persona to attract high-ticket clients. Rise and Real Marketing needed a rapid generation of campaign visuals without compromising on design quality or brand trust.</p>
+              
+              <h4>Our Solution</h4>
+              <p>We stepped in to manage their full digital operations. Our team crafted targeted promotional content, striking advertisement creatives, and managed their online presence. We ensured every post reflected their core values of reliability and premium service.</p>
+              
+              <h4>Key Contributions</h4>
+              <ul>
+                <li>High-Conversion Ad Creative Design</li>
+                <li>Social Media Post Design & Layouts</li>
+                <li>End-to-End Campaign Visuals Formulation</li>
+                <li>Brand Identity & Online Presence Management</li>
+              </ul>
+              
+              <h4>Tools & Technologies</h4>
+              <div class="tech-tags">
+                <span>Figma</span>
+                <span>Adobe Illustrator</span>
+                <span>Canva Pro</span>
+                <span>Meta Ads Manager</span>
+              </div>
+              
+              <h4>Project Outcome</h4>
+              <p>Our tailored visuals and strategic content delivery significantly boosted their lead generation metrics. The cohesive online presence established Rise and Real Marketing as a top-tier choice for real estate investors.</p>
+            </div>
+          `,
         },
         {
           id: 3,
           title: "Eleva",
           category: "Specialized Digital Services",
           shortDesc:
-            "Aesthetic and engaging digital designs created to enhance brand presence across digital platforms.",
+            "Aesthetic and engaging digital designs created to enhance brand presence across digital platforms for a premium collection.",
           tags: [
             "Digital Marketing",
             "Social Media Design",
@@ -467,9 +567,37 @@
           projectType: "Digital Design & Marketing",
           status: "Completed",
           image: "assets/lumina.jpg",
-          overviewText:
-            "<p>Aesthetic and engaging digital designs created to enhance brand presence across digital platforms.</p><h4>Key Contributions:</h4><ul><li>Designed Meta/Facebook ad creatives for premium shoe collections</li><li>Created product-focused and lifestyle marketing visuals</li><li>Maintained brand consistency across digital campaigns</li><li>Optimized designs for engagement and conversion</li><li>Produced high-quality promotional assets for social media marketing</li><li>Enhanced product presentation through compelling visual storytelling</li></ul>",
-          delivered: [],
+          gallery: ["assets/lumina.jpg", "", ""],
+          overviewText: `
+            <div class="project-detail-section">
+              <h4>Project Overview</h4>
+              <p>Eleva approached Knootix to elevate their digital aesthetic. As a brand featuring premium lifestyle products, they needed highly engaging digital designs to amplify their presence across various competitive digital platforms.</p>
+              
+              <h4>The Challenge</h4>
+              <p>Standing out in a saturated fashion and lifestyle market is demanding. The client required visually striking, high-end content that stopped the scroll and communicated luxury, quality, and style instantly to their demographic.</p>
+              
+              <h4>Our Solution</h4>
+              <p>We engineered a suite of product-focused and lifestyle marketing visuals. By combining compelling visual storytelling with optimized graphic layouts, we produced promotional assets specifically tailored for Meta/Facebook ad placements.</p>
+              
+              <h4>Key Contributions</h4>
+              <ul>
+                <li>Designed optimized Meta/Facebook ad creatives</li>
+                <li>Created premium product-focused & lifestyle visuals</li>
+                <li>Ensured strict brand consistency across all campaigns</li>
+                <li>Enhanced product presentation via visual storytelling</li>
+              </ul>
+              
+              <h4>Tools & Technologies</h4>
+              <div class="tech-tags">
+                <span>Adobe Photoshop</span>
+                <span>Adobe Lightroom</span>
+                <span>Figma</span>
+              </div>
+              
+              <h4>Project Outcome</h4>
+              <p>The visual overhaul resulted in beautifully cohesive digital campaigns. By optimizing designs for engagement and conversion, Eleva saw lowered cost-per-acquisition (CPA) on their ad spend and a 150% increase in overall social engagement.</p>
+            </div>
+          `,
         },
       ];
 
@@ -543,28 +671,51 @@
         const project = portfolioData.find((p) => p.id === projectId);
         if (!project) return;
 
+        // Ensure gallery array exists for safety
+        const gal = project.gallery || ["", "", ""];
+
         detailView.innerHTML = `
-          <button onclick="closeProject()" style="display: flex; align-items: center; background: transparent; border: 1px solid var(--btn-border); color: var(--text); padding: 8px 16px; border-radius: 8px; cursor: pointer; margin-bottom: 40px; font-size: 0.9rem;">
+          <button onclick="closeProject()" style="display: flex; align-items: center; background: transparent; border: 1px solid var(--btn-border); color: var(--text); padding: 8px 16px; border-radius: 8px; cursor: pointer; margin-bottom: 40px; font-size: 0.9rem; transition: background 0.3s;" onmouseover="this.style.background='var(--filter-bg)'" onmouseout="this.style.background='transparent'">
             < Back to Work
           </button>
           
-          <div style="display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 60px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 60px; margin-bottom: 60px;">
+            <!-- Left Side: Content -->
             <div style="flex: 1 1 500px;">
               <h1 style="color: var(--text); font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 16px;">${project.title}</h1>
-              <div style="color: var(--accent-green); font-weight: 600; margin-bottom: 24px; font-size: 1.1rem;">
+              <div style="color: var(--accent-green); font-weight: 600; margin-bottom: 32px; font-size: 1.1rem; border-bottom: 1px solid var(--card-border); padding-bottom: 24px;">
                 ${project.projectType} • ${project.year}
               </div>
-              <div style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 32px;">
+              <div>
                 ${project.overviewText}
               </div>
             </div>
             
-            <div style="flex: 1 1 400px;">
-              <img 
-                src="${project.image || ""}" 
-                alt="${project.title}" 
-                style="width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); object-fit: cover;" 
-              />
+            <!-- Right Side: 3-Image Gallery Layout -->
+            <div style="flex: 1 1 500px; display: flex; flex-direction: column; gap: 24px;">
+              
+              <!-- Image 1: Main Project Screenshot -->
+              <div style="width: 100%; border-radius: 16px; background-color: var(--img-placeholder); border: 1px solid var(--card-border); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; aspect-ratio: 4/3;">
+                <img src="${gal[0]}" alt="${project.title} - Main Image" style="width: 100%; height: 100%; object-fit: cover; ${!gal[0] ? "display:none;" : ""}" />
+                ${!gal[0] ? '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--text-muted); font-weight: 500;">Main Project Screenshot</div>' : ""}
+              </div>
+              
+              <!-- Sub Images Grid -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                
+                <!-- Image 2: Design/Section -->
+                <div style="width: 100%; border-radius: 16px; background-color: var(--img-placeholder); border: 1px solid var(--card-border); overflow: hidden; position: relative; aspect-ratio: 1/1;">
+                  <img src="${gal[1]}" alt="${project.title} - Detail View" style="width: 100%; height: 100%; object-fit: cover; ${!gal[1] ? "display:none;" : ""}" />
+                  ${!gal[1] ? '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--text-muted); text-align: center; padding: 15px; font-size: 0.9rem; font-weight: 500;">Additional Design/Section</div>' : ""}
+                </div>
+                
+                <!-- Image 3: Mobile/Extra -->
+                <div style="width: 100%; border-radius: 16px; background-color: var(--img-placeholder); border: 1px solid var(--card-border); overflow: hidden; position: relative; aspect-ratio: 1/1;">
+                  <img src="${gal[2]}" alt="${project.title} - Mobile View" style="width: 100%; height: 100%; object-fit: cover; ${!gal[2] ? "display:none;" : ""}" />
+                  ${!gal[2] ? '<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--text-muted); text-align: center; padding: 15px; font-size: 0.9rem; font-weight: 500;">Mobile Responsive / Extra View</div>' : ""}
+                </div>
+                
+              </div>
             </div>
           </div>
         `;
